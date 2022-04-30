@@ -5,7 +5,8 @@ root = Tk()
 reloj = Label(font='Arial')
 root.resizable(648,480)
 root.title('SolSpaceOS')
-
+root.attributes('-fullscreen', True)
+root.attributes('-disabled', True)
 
 def clock():
     string = time.strftime('%H:%M:%S %p')
