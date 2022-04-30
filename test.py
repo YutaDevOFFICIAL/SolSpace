@@ -1,7 +1,18 @@
-import datetime
-import tkinter as tk
+import time
+from  tkinter import *
 
-root = tk.Tk()
-clock = tk.Label(text=datetime.datetime.today)
-clock.pack()
+root = Tk()
+reloj = Label(font='Arial')
+root.resizable(648,480)
+root.title('SolSpaceOS')
+
+
+def clock():
+    string = time.strftime('%H:%M:%S %p')
+    reloj.config(text = string)
+    reloj.after(1000, clock)
+
+
+clock()
+reloj.pack(anchor=SW)
 root.mainloop()
